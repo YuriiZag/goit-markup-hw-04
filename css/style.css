@@ -13,7 +13,7 @@
     --scondary-border-color: #EEEEEE;
     --primary-icon-color:#AFB1B8;
     --hero-background: #C4C4C4;
-    --hero-lenear-gradien:rgba(47, 48, 58, 0.4);
+    --hero-lenear-gradient:rgba(47, 48, 58, 0.4);
 }
 html{
     box-sizing: border-box;
@@ -142,18 +142,18 @@ nav{
 .hero{
     background-color: var(--hero-background);
      background-image:  linear-gradient(
-                        var(--hero-lenear-gradien),
-                        var(--hero-lenear-gradien)
+                        var(--hero-lenear-gradient),
+                        var(--hero-lenear-gradient)
                          ),
                         url(../image/hero-background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
     height: 600px;
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto; 
-    
     padding-top: 200px;
     padding-bottom: 200px;
 }
