@@ -7,10 +7,13 @@
     --secondary-background-color:#2F303A;
     --secondary-white-color:#F5F4FA;
     --contacts-link-color: rgba(255,255,255,0.6);
+    --foooter-link-backgroud: rgba(255, 255, 255, 0.1);
     --hero-button-hover-color: #188CE8;
     --border-color: #ECECEC;
     --scondary-border-color: #EEEEEE;
     --primary-icon-color:#AFB1B8;
+    --hero-background: #C4C4C4;
+    --hero-lenear-gradien:rgba(47, 48, 58, 0.4);
 }
 html{
     box-sizing: border-box;
@@ -54,10 +57,7 @@ nav{
     display: flex;
     align-items: center;
 }
-.hero {
-    margin-right: auto;
-    margin-left: auto;
-} 
+
 .nav-list, .nav-contacts{
     display: flex;
     list-style: none;
@@ -140,10 +140,24 @@ nav{
 /* Main */
 /* Hero */
 .hero{
-    background-color: var(--secondary-background-color);
+    background-color: var(--hero-background);
+     background-image:  linear-gradient(
+                        var(--hero-lenear-gradien),
+                        var(--hero-lenear-gradien)
+                         ),
+                        url(../image/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto; 
+    
     padding-top: 200px;
     padding-bottom: 200px;
 }
+
 .hero-heading{
     color: var(--primary-white-color);
     text-align: center;
@@ -347,7 +361,52 @@ nav{
     background-color: var(--primary-hover-color);
     fill: var(--primary-white-color);
     }
-/* Footer */
+
+
+
+/* Full-time-clients */
+.clients{
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+.clients h2{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.67;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+.clients-list{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.clients-list li+li{
+    margin-left: 30px;
+}
+.clients-list a{
+    fill: var(--primary-icon-color);
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--primary-icon-color);
+    border-radius: 4px;
+    
+    justify-content: center;
+    align-items: center;
+}
+.clients-icon{
+    color: currentColor;
+    height: 60px;
+    width: 106px;
+}
+.clients-list a:hover, .clients-list a:focus{
+    border-color: var(--primary-hover-color);
+    fill: var(--primary-hover-color);
+}
+    /* Footer */
 footer{
     background-color: var(--secondary-background-color);
     padding-top: 60px;
@@ -382,6 +441,9 @@ footer li:last-child{
 .footer-address-link{
     text-decoration: none;
 }
+footer .container{
+    display: flex;
+}
 address{
     font-style: normal;
 }
@@ -394,10 +456,60 @@ address{
     text-decoration: none;
     line-height: 1.71;
 }
-.footer-contact-link:hover, .f-contact-link:focus{
+.footer-contact-link:hover, .footer-contact-link:focus{
     color: var(--primary-hover-color);
 }
 
+.social-links-container{
+    margin-left: 70px;
+}
+footer .social-link-header{
+    color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.14;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+}
+
+.footer-social-links {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-social-links>li {
+    background-color: var(--foooter-link-backgroud);
+    display: block;
+    border-radius: 50%;
+    box-shadow: none;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.footer-social-links>li+li {
+    margin-left: 10px;
+}
+
+.footer-social-links a {
+    fill: var(--primary-white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+}
+.footer-social-icon{
+    width: 20px;
+    height: 20px;
+}
+.footer-social-links a:hover,
+.footer-social-links a:focus{
+    background-color: var(--primary-hover-color);
+}
 
 /* Portfolio */
 /* Filters */
@@ -467,6 +579,11 @@ address{
     
     display: inline-block;
 
+}
+.w-list li:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .work .w-name{
     color: var(--primary-text-color);
