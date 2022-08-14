@@ -510,7 +510,9 @@ footer .social-link-header{
 .footer-social-links a:focus{
     background-color: var(--primary-hover-color);
 }
-
+footer>.container {
+    align-items: baseline;
+}
 /* Portfolio */
 /* Filters */
 .works-section{
@@ -563,6 +565,7 @@ footer .social-link-header{
 }
 .work{
     text-decoration: none;
+    display: inline-block;
 }
 .w-list{
     list-style: none;
@@ -580,7 +583,7 @@ footer .social-link-header{
     display: inline-block;
 
 }
-.w-list li:hover{
+.w-list a:hover, .w-list a:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
                 0px 4px 4px rgba(0, 0, 0, 0.06), 
                 1px 4px 6px rgba(0, 0, 0, 0.16);
